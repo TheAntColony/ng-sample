@@ -1,5 +1,7 @@
 # AC Angular Sample
 
+Screenshot 2023-10-18 at 16.42.34
+
 ## :warning: Note
 
 > This code is extracted from a larger project and is intended strictly for demonstration purposes. It may not include all features, error-handling, or production-ready practices of the original codebase.
