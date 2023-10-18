@@ -1,27 +1,88 @@
-# Angular sample
+# AC Angular Sample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+## :warning: Note
 
-## Development server
+> This code is extracted from a larger project and is intended strictly for demonstration purposes. It may not include all features, error-handling, or production-ready practices of the original codebase.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Table of Contents
 
-## Code scaffolding
+- [Features](#features)
+- [Technologies](#technologies)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [State Management](#state-management)
+- [Contributing](#contributing)
+- [License](#license)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+- State Management with NgRx
+- Observable-based data streams with RxJS
+- Modular architecture
+- High-performance UI
+- Memoized Selectors
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies
 
-## Running end-to-end tests
+- Angular 16
+- NgRx 16
+- RxJS 7
+- TypeScript 5.x
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Prerequisites
 
-## Further help
+- Node.js v16.x.x or above
+- npm v6.x.x or above
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Getting Started
+
+Clone the repository:
+
+\`\`\`bash
+git clone https://github.com/TheAntColony/ng-sample
+\`\`\`
+
+Navigate into the project directory:
+
+\`\`\`bash
+cd ng-sample
+\`\`\`
+
+Install the dependencies:
+
+\`\`\`bash
+npm install
+\`\`\`
+
+Run the development server:
+
+\`\`\`bash
+ng serve
+\`\`\`
+
+Open [http://localhost:4200](http://localhost:4200) in your browser.
+
+## Usage
+
+This section can include examples of different routes, features, and state management capabilities.
+
+## Folder Structure
+
+- `src/app/core`: Core module (Singleton services and single-use components)
+- `src/app/features`: Feature modules
+- `src/app/shared`: Shared module (Common components, directives, and pipes)
+- `src/app/state`: NgRx state (Actions, Reducers, Effects, Selectors)
+
+## State Management
+
+The application uses NgRx for state management and follows best practices for actions, reducers, effects, and selectors.
+
+- Actions: Descriptive and responsible for state changes.
+- Reducers: Pure functions that take the current state and an action, then return a new state.
+- Effects: Handle side-effects such as API calls.
+- Selectors: Efficiently select slices of state and can be composed together.
+
