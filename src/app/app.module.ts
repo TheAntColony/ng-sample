@@ -5,8 +5,8 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { dataReducer } from './reducers/data.reducer';
-import { DataEffects } from './effects/data.effects';
+import { dataReducer } from './state/reducers/data.reducer';
+import { DataEffects } from './state/effects/data.effects';
 import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';

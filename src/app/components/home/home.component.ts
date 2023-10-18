@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../app.state';
-import * as DataActions from '../../actions/data.actions';
+import * as DataActions from '../../state/actions/data.actions';
 import {
   selectSortedData,
-} from '../../selectors/data.selectors';
+} from '../../state/selectors/data.selectors';
 import { Observable } from 'rxjs';
 
 @Component({
