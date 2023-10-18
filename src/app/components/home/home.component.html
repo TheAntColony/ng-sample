@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>Welcome to Home!</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th
+          [ngClass]="{
+            'sorted-asc':
+              currentSort.key === 'id' && currentSort.direction === 'asc',
+            'sorted-desc':
+              currentSort.key === 'id' && currentSort.direction === 'desc'
+          }"
+          (click)="sortData('id')"
+        >
+          ID
+        </th>
+        <th
+          [ngClass]="{
+            'sorted-asc':
+              currentSort.key === 'name' && currentSort.direction === 'asc',
+            'sorted-desc':
+              currentSort.key === 'name' && currentSort.direction === 'desc'
+          }"
+          (click)="sortData('name')"
+        >
+          Name
+        </th>
+        <th
+          [ngClass]="{
+            'sorted-asc':
+              currentSort.key === 'salary' && currentSort.direction === 'asc',
+            'sorted-desc':
+              currentSort.key === 'salary' && currentSort.direction === 'desc'
+          }"
+          (click)="sortData('salary')"
+        >
+          Salary
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of sortedData$ | async">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.salary }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
