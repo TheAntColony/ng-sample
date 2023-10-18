@@ -68,9 +68,6 @@ ng serve
 
 Open [http://localhost:4200](http://localhost:4200) in your browser.
 
-## Usage
-
-This section can include examples of different routes, features, and state management capabilities.
 
 ## Folder Structure
 
