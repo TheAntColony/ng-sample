@@ -42,27 +42,27 @@
 
 Clone the repository:
 
-\`\`\`bash
+```
 git clone https://github.com/TheAntColony/ng-sample
-\`\`\`
+```
 
 Navigate into the project directory:
 
-\`\`\`bash
+```
 cd ng-sample
-\`\`\`
+```
 
 Install the dependencies:
 
-\`\`\`bash
+```
 npm install
-\`\`\`
+```
 
 Run the development server:
 
-\`\`\`bash
+```
 ng serve
-\`\`\`
+```
 
 Open [http://localhost:4200](http://localhost:4200) in your browser.
 
