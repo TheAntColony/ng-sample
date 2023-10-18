@@ -1,6 +1,6 @@
 # AC Angular Sample
 
-Screenshot 2023-10-18 at 16.42.34
+<img width="1111" alt="Screenshot 2023-10-18 at 16 42 34" src="https://github.com/TheAntColony/ng-sample/assets/24781746/c19e9de8-23ea-420b-a8b2-0e60d00a8bd3">
 
 ## :warning: Note
 
