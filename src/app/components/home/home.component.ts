@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../app.state';
 import * as DataActions from '../../state/actions/data.actions';
-import {
-  selectSortedData,
-} from '../../state/selectors/data.selectors';
+import { selectSortedData } from '../../state/selectors/data.selectors';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -28,7 +26,7 @@ export class HomeComponent implements OnInit {
     this.store.dispatch(DataActions.loadData());
   }
 
-  sortData(key: string) {
+  sortData(key: string): void {
     if (this.currentSort.key === key) {
       this.currentSort.direction =
         this.currentSort.direction === 'asc' ? 'desc' : 'asc';
@@ -43,5 +41,14 @@ export class HomeComponent implements OnInit {
         sortOrder: this.currentSort.direction,
       })
     );
+  }
+
+  onAddItem(): void {
+    const newItem = {
+      id: 6,
+      name: 'Bob Brown',
+      salary: 900,
+    };
+    this.store.dispatch(DataActions.addItem(newItem));
   }
 }
