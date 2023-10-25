@@ -3,6 +3,7 @@ import {
   loadData,
   dataLoaded,
   setSort,
+  addItem,
 } from '../actions/data.actions';
 
 export interface DataState {
@@ -22,7 +23,14 @@ const _dataReducer = createReducer(
   on(setSort, (state, { sortKey, sortOrder }) => ({
     ...state,
     sort: { key: sortKey, direction: sortOrder },
-  }))
+  })),
+  on(addItem, (state, item) => {
+    console.log(state, item)
+    return {
+      ...state,
+      data: [...state.data, item],
+    };
+  })
 );
 
 export function dataReducer(state: any, action: any) {

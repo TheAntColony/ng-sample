@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
 
 import { HomeComponent } from './home.component';
-import { loadData, setSort } from 'src/app/state/actions/data.actions';
+import { addItem, loadData, setSort } from 'src/app/state/actions/data.actions';
 import { DataState } from 'src/app/state/reducers/data.reducer';
 
 describe('HomeComponent', () => {
@@ -99,4 +99,21 @@ describe('HomeComponent', () => {
       setSort({ sortKey: 'name', sortOrder: 'asc' })
     );
   });
+
+  it('should dispatch addItem action with correct payload when onAddItem is called', () => {
+    const dispatchSpy = spyOn(store, 'dispatch');
+
+    const expectedItem = {
+      id: 6,
+      name: 'Bob Brown',
+      salary: 900,
+    };
+
+    component.onAddItem();
+
+    expect(dispatchSpy).toHaveBeenCalledWith(
+      addItem(expectedItem)
+    );
+  });
+
 });

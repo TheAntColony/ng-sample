@@ -1,5 +1,10 @@
 import { DataState, dataReducer } from './data.reducer';
-import { dataLoaded, loadData, setSort } from '../actions/data.actions';
+import {
+  addItem,
+  dataLoaded,
+  loadData,
+  setSort,
+} from '../actions/data.actions';
 
 describe('DataReducer', () => {
   it('should return the initial state when the "loadData" action is dispatched', () => {
@@ -35,6 +40,18 @@ describe('DataReducer', () => {
     expect(newState.sort).toEqual({ key: sortKey, direction: sortOrder });
   });
 
+  it('should handle the case where the "addItem" action is dispatched', () => {
+    const initialState: DataState = {
+      data: [],
+      sort: { key: 'id', direction: 'asc' },
+    };
+    const newItem = { id: 6, name: 'Bob Brown', salary: 900 };
+    const action = addItem(newItem);
+    const newState = dataReducer(initialState, action);
+    console.log(newState)
+    expect(newState.data.length).toEqual(1);
+  });
+
   it('should handle the case where the "dataLoaded" action is dispatched with no data', () => {
     const initialState: DataState = {
       data: [],
@@ -44,4 +61,5 @@ describe('DataReducer', () => {
     const newState = dataReducer(initialState, action);
     expect(newState.data).toEqual([]);
   });
+
 });
