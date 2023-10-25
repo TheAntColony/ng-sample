@@ -1,5 +1,4 @@
 import { createSelector } from 'reselect';
-import { AppState } from '../../app.state';
 import { DataState } from '../reducers/data.reducer';
 import { createFeatureSelector } from '@ngrx/store';
 
